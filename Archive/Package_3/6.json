@@ -1,0 +1,42 @@
+{
+  "age": 70,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 100,
+    "height_cm": 172,
+    "bmi_category": "Obese"
+  },
+  "ethnicity": "South Asian",
+  "disease": {
+    "name": "Chronic Obstructive Pulmonary Disease",
+    "diagnosed_years_ago": 9,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Tiotropium",
+      "dosage_mg_per_day": 0.00125,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Prednisolone",
+      "dosage_mg_per_day": 45,
+      "percent_week_administered": 100,
+      "indication": "Other"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+

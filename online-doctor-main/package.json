@@ -1,0 +1,16 @@
+{
+  "name": "ai-online-doctor",
+  "version": "1.0.0",
+  "description": "AI-powered online doctor for initial diagnosis and medical assistance",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "npx http-server public -p 8080 -o",
+    "dev": "npx http-server public -p 8080 -o -c-1"
+  },
+  "keywords": ["ai", "medical", "diagnosis", "healthcare", "groq"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+} 

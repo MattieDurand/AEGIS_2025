@@ -1,0 +1,54 @@
+{
+  "age": 67,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null 
+  },
+  "weight": {
+    "weight_kg": 82.5,
+    "height_cm": 175,
+    "bmi_category": "Overweight"  
+  },
+  "ethnicity": "South Asian",  
+  "disease": {
+    "name": "Type 2 Diabetes Mellitus",  
+    "diagnosed_years_ago": 5,
+    "prognosis": "Stable"  
+  },
+  "comorbidities": [
+    {
+      "name": "Hypertension",
+      "diagnosed_years_ago": 8,
+      "prognosis": "Worsening"
+    },
+    {
+      "name": "Chronic Kidney Disease",
+      "diagnosed_years_ago": 2,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Metformin",
+      "dosage_mg_per_day": 1500,
+      "percent_week_administered": 100,
+      "indication": "Primary"  
+    },
+    {
+      "treatment_name": "Lisinopril",
+      "dosage_mg_per_day": 20,
+      "percent_week_administered": 100,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "variant_name": "HLA-B*57:01",
+      "associated_risks": ["Abacavir hypersensitivity"]
+    },
+    {
+      "variant_name": "APOE-e4",
+      "associated_risks": ["Increased Alzheimer’s risk"]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "age": 54,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 71,
+    "height_cm": 163,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "East Asian",
+  "disease": {
+    "name": "Type 2 Diabetes Mellitus",
+    "diagnosed_years_ago": 3,
+    "prognosis": "Improving"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Metformin",
+      "dosage_mg_per_day": 850,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}

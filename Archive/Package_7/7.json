@@ -1,0 +1,49 @@
+{
+  "age": 55,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 88,
+    "height_cm": 160,
+    "bmi_category": "Obese"
+  },
+  "ethnicity": "Middle Eastern",
+  "disease": {
+    "name": "COVID-19",
+    "diagnosed_years_ago": 0.01,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Remdesivir (IV)",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Dexamethasone (Oral)",
+      "dosage_mg_per_day": 6,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

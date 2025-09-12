@@ -1,0 +1,46 @@
+{
+  "age": 28,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 59,
+    "height_cm": 168,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "Middle Eastern",
+  "disease": {
+    "name": "Breast Cancer",
+    "diagnosed_years_ago": 0.3,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Olaparib",
+      "dosage_mg_per_day": 300,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "BRCA1",
+      "variant": "185delAG",
+      "effect": "Truncating mutation associated with hereditary breast and ovarian cancer"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+

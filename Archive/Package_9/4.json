@@ -1,0 +1,52 @@
+{
+  "age": 61,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 77,
+    "height_cm": 160,
+    "bmi_category": "Obese"
+  },
+  "ethnicity": "South Asian",
+  "disease": {
+    "name": "Breast Cancer",
+    "diagnosed_years_ago": 5,
+    "prognosis": "Terminal"
+  },
+  "comorbidities": [
+    {
+      "name": "Type 2 Diabetes",
+      "diagnosed_years_ago": 10,
+      "prognosis": "Worsening"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Capecitabine",
+      "dosage_mg_per_day": 1500,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Metformin",
+      "dosage_mg_per_day": 1000,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+
+

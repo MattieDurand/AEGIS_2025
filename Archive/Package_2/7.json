@@ -1,0 +1,38 @@
+{
+  "age": 10,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 35.2,
+    "height_cm": 140,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Acute myeloid leukaemia of childhood",
+    "diagnosed_years_ago": 2,
+    "prognosis": "Improving"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Cytarabine",
+      "dosage_mg_per_day": 120,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Idarubicin",
+      "dosage_mg_per_day": 12,
+      "percent_week_administered": 43,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+

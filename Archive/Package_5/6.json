@@ -1,0 +1,42 @@
+{
+  "age": 23,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 60,
+    "height_cm": 180,
+    "bmi_category": "Normal"
+  },
+  "ethnicity": "Indigenous Australian",
+  "disease": {
+    "name": "Multidrug Resistant Tuberculosis",
+    "diagnosed_years_ago": 0.8,
+    "prognosis": "Improving"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Moxifloxacin",
+      "dosage_mg_per_day": 400,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Linezolid",
+      "dosage_mg_per_day": 600,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Vitamin D",
+      "dosage_mg_per_day": 2000,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+

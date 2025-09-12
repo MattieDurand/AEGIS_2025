@@ -1,0 +1,50 @@
+{
+  "age": 4,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 15,
+    "height_cm": 100,
+    "bmi_category": "Normal"
+  },
+  "ethnicity": "Black",
+  "disease": {
+    "name": "Multidrug Resistant Tuberculosis",
+    "diagnosed_years_ago": 0.1,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Severe Malnutrition",
+      "diagnosed_years_ago": 0.1,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Linezolid",
+      "dosage_mg_per_day": 150,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Levofloxacin",
+      "dosage_mg_per_day": 250,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Nutritional Support (Therapeutic Milk)",
+      "dosage_mg_per_day": null,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+

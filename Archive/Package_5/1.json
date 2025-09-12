@@ -1,0 +1,62 @@
+{
+  "age": 18,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 54,
+    "height_cm": 177,
+    "bmi_category": "Underweight"
+  },
+  "ethnicity": "Black",
+  "disease": {
+    "name": "Multidrug Resistant Tuberculosis",
+    "diagnosed_years_ago": 0.5,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Peripheral Neuropathy",
+      "diagnosed_years_ago": 0.2,
+      "prognosis": "Stable"
+    }
+
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Isoniazid",
+      "dosage_mg_per_day": 275,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Ethambutol",
+      "dosage_mg_per_day": 810,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Pyridoxine",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

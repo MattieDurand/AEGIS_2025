@@ -1,0 +1,59 @@
+{
+  "age": 30,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 77,
+    "height_cm": 172,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "Hispanic",
+  "disease": {
+    "name": "Human Immunodeficiency Virus (HIV)",
+    "diagnosed_years_ago": 3,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Hepatitis B",
+      "diagnosed_years_ago": 1,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Tenofovir alafenamide",
+      "dosage_mg_per_day": 25,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Emtricitabine",
+      "dosage_mg_per_day": 200,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Bictegravir",
+      "dosage_mg_per_day": 50,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

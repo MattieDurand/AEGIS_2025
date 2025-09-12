@@ -1,0 +1,55 @@
+{
+  "age": 79, 
+  "gender": { 
+    "category": "Female", 
+    "intersex_condition": null 
+  }, 
+  "weight": { 
+    "weight_kg": 49, 
+    "height_cm": 172, 
+    "bmi_category": "Underweight" 
+  }, 
+  "ethnicity": "White European", 
+  "disease": { 
+    "name": "Lung Cancer", 
+    "diagnosed_years_ago": 3, 
+    "prognosis": "Terminal" 
+  }, 
+  "comorbidities": [ 
+    { 
+      "name": "Chronic Obstructive Pulmonary Disease", 
+      "diagnosed_years_ago": 2, 
+      "prognosis": "Worsening" 
+    } 
+  ], 
+  "treatments": [ 
+    { 
+      "treatment_name": "Gemcitabine (IV)", 
+      "dosage_mg_per_day": 1550, 
+      "percent_week_administered": 14, 
+      "indication": "Primary" 
+    }, 
+    { 
+      "treatment_name": "Cisplatin (IV)", 
+      "dosage_mg_per_day": 155, 
+      "percent_week_administered": null, 
+      "indication": "Primary" 
+    }, 
+    { 
+      "treatment_name": "Salbutamol (Nebulised)", 
+      "dosage_mg_per_day": 3,
+      "percent_week_administered": 400, 
+      "indication": "Secondary" 
+    } 
+  ], 
+  "genetic_variants": [] 
+}
+
+
+
+
+
+
+
+
+

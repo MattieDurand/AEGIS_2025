@@ -1,0 +1,52 @@
+{
+  "age": 14,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": "Klinefelter"
+  },
+  "weight": {
+    "weight_kg": 58,
+    "height_cm": 168,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "Black",
+  "disease": {
+    "name": "Acute myeloid leukaemia of childhood",
+    "diagnosed_years_ago": 2,
+    "prognosis": "Improving"
+  },
+  "comorbidities": [
+    {
+      "name": "Asthma",
+      "diagnosed_years_ago": 7,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Cytarabine",
+      "dosage_mg_per_day": 135,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Idarubicin",
+      "dosage_mg_per_day": 10,
+      "percent_week_administered": 29,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Budesonide",
+      "dosage_mg_per_day": 150,
+      "percent_week_administered": 200,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "variant_name": "ABCB1 rs1045642",
+      "associated_risks": ["Altered anthracycline efflux"]
+    }
+  ]
+}
+

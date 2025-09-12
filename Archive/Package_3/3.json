@@ -1,0 +1,38 @@
+{
+  "age": 61,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 94,
+    "height_cm": 180,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "Black",
+  "disease": {
+    "name": "Chronic Obstructive Pulmonary Disease",
+    "diagnosed_years_ago": 2,
+    "prognosis": "Improving"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Formoterol",
+      "dosage_mg_per_day": 0.018,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "variant_name": "ADRB2 Arg16Gly",
+      "associated_risks": ["Altered β-agonist response"]
+    }
+  ]
+}
+
+
+
+
+

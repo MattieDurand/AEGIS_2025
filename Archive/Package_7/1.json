@@ -1,0 +1,55 @@
+{
+  "age": 34,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 70,
+    "height_cm": 172,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "East Asian",
+  "disease": {
+    "name": "COVID-19",
+    "diagnosed_years_ago": 0.1,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Asthma",
+      "diagnosed_years_ago": 17,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Sotrovimab",
+      "dosage_mg_per_day": 500,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Salbutamol",
+      "dosage_mg_per_day": 0.15,
+      "percent_week_administered": 29,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "ACE2",
+      "variant": "rs2285666 T/T",
+      "effect": "Reported association with altered ACE2 expression; associated with heightened susceptibility"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+

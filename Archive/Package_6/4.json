@@ -1,0 +1,34 @@
+{
+  "age": 29,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": "Klinefelter Syndrome"
+  },
+  "weight": {
+    "weight_kg": 65,
+    "height_cm": 182,
+    "bmi_category": "Normal"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Hyperthyroidism",
+    "diagnosed_years_ago": 3,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Methimazole",
+      "dosage_mg_per_day": 10,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+

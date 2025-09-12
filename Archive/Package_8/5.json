@@ -1,0 +1,58 @@
+{
+  "age": 63,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 67,
+    "height_cm": 168,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "Black",
+  "disease": {
+    "name": "Lung Cancer",
+    "diagnosed_years_ago": 0.5,
+    "prognosis": "Improving"
+  },
+  "comorbidities": [
+    {
+      "name": "Hypertension",
+      "diagnosed_years_ago": 12,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Cisplatin (IV)",
+      "dosage_mg_per_day": 75,
+      "percent_week_administered": 29,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Etoposide (IV)",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": 14,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Palliative Radiotherapy",
+      "dosage_mg_per_day": null,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+
+

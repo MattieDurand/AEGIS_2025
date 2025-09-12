@@ -1,0 +1,54 @@
+{
+  "age": 38,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 70,
+    "height_cm": 166,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "Middle Eastern",
+  "disease": {
+    "name": "Human Immunodeficiency Virus (HIV)",
+    "diagnosed_years_ago": 6,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Raltegravir",
+      "dosage_mg_per_day": 400,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Tenofovir disoproxil",
+      "dosage_mg_per_day": 300,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Emtricitabine",
+      "dosage_mg_per_day": 200,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

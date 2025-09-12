@@ -1,0 +1,35 @@
+{
+  "age": 51,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 63,
+    "height_cm": 165,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "South Asian",
+  "disease": {
+    "name": "Lung Cancer",
+    "diagnosed_years_ago": 1.2,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Alectinib (Oral)",
+      "dosage_mg_per_day": 450,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "ALK",
+      "variant": "EML4-ALK fusion",
+      "effect": "Oncogenic fusion — predicts response to ALK inhibitors (e.g., alectinib)"
+    }
+  ]
+}
+

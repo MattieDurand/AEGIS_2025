@@ -1,0 +1,53 @@
+{
+  "age": 77,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 68,
+    "height_cm": 158,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "Hispanic",
+  "disease": {
+    "name": "Chronic Obstructive Pulmonary Disease",
+    "diagnosed_years_ago": 12,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Anxiety",
+      "diagnosed_years_ago": 3,
+      "prognosis": "Improving"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Budesonide",
+      "dosage_mg_per_day": 0.36,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Formoterol",
+      "dosage_mg_per_day": 0.016,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Sertraline",
+      "dosage_mg_per_day": 50,
+      "percent_week_administered": 100,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+

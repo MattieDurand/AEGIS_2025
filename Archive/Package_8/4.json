@@ -1,0 +1,45 @@
+{
+  "age": 69,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 81,
+    "height_cm": 176,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "Hispanic/Latino",
+  "disease": {
+    "name": "Lung Cancer",
+    "diagnosed_years_ago": 1,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Pembrolizumab (IV)",
+      "dosage_mg_per_day": 160,
+      "percent_week_administered": 14,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "PD-L1",
+      "variant": "Tumour proportion score >=50%",
+      "effect": "High PD-L1 expression — predictor of response to anti-PD-1 therapy"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+{
+  "age": 61,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 70,
+    "height_cm": 170,
+    "bmi_category": "Normal"
+  },
+  "ethnicity": "White",
+  "disease": {
+    "name": "Multidrug Resistant Tuberculosis",
+    "diagnosed_years_ago": 8,
+    "prognosis": "Terminal"
+  },
+  "comorbidities": [
+    {
+      "name": "Chronic Obstructive Pulmonary Disease",
+      "diagnosed_years_ago": 10,
+      "prognosis": "Worsening"
+    },
+    {
+      "name": "Hypertension",
+      "diagnosed_years_ago": 15,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Capreomycin",
+      "dosage_mg_per_day": 1000,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Amlodipine",
+      "dosage_mg_per_day": 10,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    },
+    {
+      "treatment_name": "Tiotropium",
+      "dosage_mg_per_day": 0.009,
+      "percent_week_administered": 200,
+      "indication": "Secondary"
+    },
+    {
+      "treatment_name": "Salbutamol",
+      "dosage_mg_per_day": 5,
+      "percent_week_administered": 43,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+

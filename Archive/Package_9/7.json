@@ -1,0 +1,47 @@
+{
+  "age": 71,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 64,
+    "height_cm": 158,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Breast Cancer",
+    "diagnosed_years_ago": 7,
+    "prognosis": "Terminal"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Paclitaxel (IV)",
+      "dosage_mg_per_day": 135,
+      "percent_week_administered": 14,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Bevacizumab (IV)",
+      "dosage_mg_per_day": 600,
+      "percent_week_administered": 14,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

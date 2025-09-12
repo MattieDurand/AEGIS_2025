@@ -1,0 +1,50 @@
+{
+  "age": 62,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 82,
+    "height_cm": 178,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "COVID-19",
+    "diagnosed_years_ago": 0.05,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Nirmatrelvir",
+      "dosage_mg_per_day": 600,
+      "percent_week_administered": 71,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Ritonavir",
+      "dosage_mg_per_day": 200,
+      "percent_week_administered": 71,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Dexamethasone (Oral)",
+      "dosage_mg_per_day": 6,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+

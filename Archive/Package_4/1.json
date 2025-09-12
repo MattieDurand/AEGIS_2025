@@ -1,0 +1,50 @@
+{
+  "age": 27,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 67,
+    "height_cm": 177,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "African",
+  "disease": {
+    "name": "Human Immunodeficiency Virus (HIV)",
+    "diagnosed_years_ago": 2,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Dolutegravir",
+      "dosage_mg_per_day": 50,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Abacavir",
+      "dosage_mg_per_day": 600,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Lamivudine",
+      "dosage_mg_per_day": 300,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+{
+  "age": 39,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 68,
+    "height_cm": 163,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "Black",
+  "disease": {
+    "name": "Breast Cancer",
+    "diagnosed_years_ago": 1,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Doxorubicin (IV)",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Cyclophosphamide (IV)",
+      "dosage_mg_per_day": 136,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+

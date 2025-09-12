@@ -1,0 +1,60 @@
+{
+  "age": 81,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 75,
+    "height_cm": 170,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "East Asian",
+  "disease": {
+    "name": "COVID-19",
+    "diagnosed_years_ago": 0.15,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Chronic Kidney Disease",
+      "diagnosed_years_ago": 8,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Sotrovimab (IV)",
+      "dosage_mg_per_day": 500,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Furosemide",
+      "dosage_mg_per_day": 40,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "TMPRSS2",
+      "variant": "rs12329760 T/C",
+      "effect": "May alter viral entry efficiency; inconsistent evidence in COVID-19 outcomes"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

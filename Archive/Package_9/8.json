@@ -1,0 +1,48 @@
+{
+  "age": 36,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": "Androgen Insensitivity Syndrome"
+  },
+  "weight": {
+    "weight_kg": 60,
+    "height_cm": 174,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Breast Cancer",
+    "diagnosed_years_ago": 1,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Tamoxifen",
+      "dosage_mg_per_day": 40,
+      "percent_week_administered": 71,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "BRCA1",
+      "variant": "5382insC",
+      "effect": "Pathogenic frameshift mutation associated with hereditary breast cancer"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

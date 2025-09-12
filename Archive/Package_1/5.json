@@ -1,0 +1,57 @@
+{
+  "age": 68,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 90,
+    "height_cm": 177,
+    "bmi_category": "Obese"
+  },
+  "ethnicity": "Middle Eastern",
+  "disease": {
+    "name": "Type 2 Diabetes Mellitus",
+    "diagnosed_years_ago": 10,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Coronary Artery Disease",
+      "diagnosed_years_ago": 5,
+      "prognosis": "Worsening"
+    },
+    {
+      "name": "Hyperlipidemia",
+      "diagnosed_years_ago": 7,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Metformin",
+      "dosage_mg_per_day": 2000,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Atorvastatin",
+      "dosage_mg_per_day": 40,
+      "percent_week_administered": 100,
+      "indication": "Comorbidity"
+    },
+    {
+      "treatment_name": "Aspirin",
+      "dosage_mg_per_day": 75,
+      "percent_week_administered": 100,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "variant_name": "SLCO1B1*5",
+      "associated_risks": ["Statin-associated myopathy"]
+    }
+  ]
+}
+

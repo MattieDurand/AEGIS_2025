@@ -1,0 +1,49 @@
+{
+  "age": 44,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 55,
+    "height_cm": 165,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "South Asian",
+  "disease": {
+    "name": "Breast Cancer",
+    "diagnosed_years_ago": 0.5,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Docetaxel",
+      "dosage_mg_per_day": 112,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Trastuzumab",
+      "dosage_mg_per_day": 330,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Pertuzumab",
+      "dosage_mg_per_day": 420,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+

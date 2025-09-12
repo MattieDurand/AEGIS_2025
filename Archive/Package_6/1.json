@@ -1,0 +1,40 @@
+{
+  "age": 33,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 43,
+    "height_cm": 160,
+    "bmi_category": "Underweight"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Hyperthyroidism",
+    "diagnosed_years_ago": 1,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Alcohol Dependence",
+      "diagnosed_years_ago": 2,
+      "prognosis": "Improving"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Methimazole",
+      "dosage_mg_per_day": 15,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Nalmefene",
+      "dosage_mg_per_day": 18,
+      "percent_week_administered": 43,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}

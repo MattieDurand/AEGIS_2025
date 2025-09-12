@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Online Doctor - Medical Assistant</title>
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-user-md"></i>
+                <h1>AI Doctor</h1>
+            </div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Welcome Section -->
+        <section class="welcome-section" id="welcome">
+            <div class="container">
+                <div class="welcome-content">
+                    <h2>Get Medical Assistance Anytime, Anywhere</h2>
+                    <p>Select the body area where you're experiencing symptoms and get AI-powered medical guidance.</p>
+                    <div class="api-key-notice" id="api-key-notice" style="display: none;">
+                        <p><i class="fas fa-info-circle"></i> Please configure your API key in the bottom left corner to continue.</p>
+                    </div>
+                    <button class="cta-button" onclick="startDiagnosis()">
+                        <i class="fas fa-stethoscope"></i>
+                        Start Diagnosis
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Body Selection Section -->
+        <section class="body-selection-section" id="body-selection" style="display: none;">
+            <div class="container">
+                <h2>Select the affected body area</h2>
+                <div class="body-diagram-container">
+                    <div class="body-diagram">
+                        <svg viewBox="0 0 200 400" class="body-svg">
+                            <!-- Head -->
+                            <ellipse cx="100" cy="30" rx="25" ry="30" class="body-part" data-area="head" id="head"/>
+                            <text x="100" y="35" text-anchor="middle" class="body-label">Head</text>
+                            
+                            <!-- Neck -->
+                            <rect x="85" y="55" width="30" height="15" class="body-part" data-area="neck" id="neck"/>
+                            <text x="100" y="67" text-anchor="middle" class="body-label">Neck</text>
+                            
+                            <!-- Chest -->
+                            <ellipse cx="100" cy="100" rx="40" ry="35" class="body-part" data-area="chest" id="chest"/>
+                            <text x="100" y="105" text-anchor="middle" class="body-label">Chest</text>
+                            
+                            <!-- Left Arm -->
+                            <ellipse cx="50" cy="120" rx="15" ry="45" class="body-part" data-area="left-arm" id="left-arm"/>
+                            <text x="50" y="125" text-anchor="middle" class="body-label">L.Arm</text>
+                            
+                            <!-- Right Arm -->
+                            <ellipse cx="150" cy="120" rx="15" ry="45" class="body-part" data-area="right-arm" id="right-arm"/>
+                            <text x="150" y="125" text-anchor="middle" class="body-label">R.Arm</text>
+                            
+                            <!-- Abdomen -->
+                            <ellipse cx="100" cy="170" rx="35" ry="30" class="body-part" data-area="abdomen" id="abdomen"/>
+                            <text x="100" y="175" text-anchor="middle" class="body-label">Abdomen</text>
+                            
+                            <!-- Left Leg -->
+                            <ellipse cx="80" cy="280" rx="18" ry="80" class="body-part" data-area="left-leg" id="left-leg"/>
+                            <text x="80" y="285" text-anchor="middle" class="body-label">L.Leg</text>
+                            
+                            <!-- Right Leg -->
+                            <ellipse cx="120" cy="280" rx="18" ry="80" class="body-part" data-area="right-leg" id="right-leg"/>
+                            <text x="120" y="285" text-anchor="middle" class="body-label">R.Leg</text>
+                        </svg>
+                    </div>
+                    <div class="selected-area">
+                        <h3>Selected Area: <span id="selected-area-name">None</span></h3>
+                        <button class="continue-btn" id="continue-to-symptoms" disabled onclick="showSymptoms()">
+                            Continue to Symptoms <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Symptoms Section -->
+        <section class="symptoms-section" id="symptoms-section" style="display: none;">
+            <h2>Describe your symptoms</h2>
+            <div class="container">
+                <div class="symptoms-container">
+                    <div class="common-symptoms">
+                        <h3>Common Symptoms (click to select)</h3>
+                        <div class="symptom-tags" id="symptom-tags">
+                            <!-- Will be populated by JavaScript based on selected body area -->
+                        </div>
+                    </div>
+                    
+                    <div class="custom-symptoms">
+
+                        <!-- Patient Information -->
+                        <div class="section-card" style="margin-bottom: 30px;">
+                            <h3>Patient Information</h3>
+                            <div class="grid-2">
+                            <div>
+                                <label for="age">Age</label>
+                                <input type="number" id="age" value="34">
+                            </div>
+                            <div>
+                                <label for="gender">Gender</label>
+                                <select id="gender">
+                                <option value="Female" selected>Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Non-binary">Non-binary</option>
+                                <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="intersex-condition">Intersex Condition</label>
+                                <input type="text" id="intersex-condition" placeholder="Optional">
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="custom-symptoms">
+
+                        <!-- Weight & Height -->
+                        <div class="section-card" style="margin-bottom: 30px;">
+                            <h3>Weight & Height</h3>
+                            <div class="grid-3">
+                            <div>
+                                <label for="weight-kg">Weight (kg)</label>
+                                <input type="number" id="weight-kg" value="59">
+                            </div>
+                            <div>
+                                <label for="height-cm">Height (cm)</label>
+                                <input type="number" id="height-cm" value="168">
+                            </div>
+                            <div>
+                                <label for="bmi-category">BMI Category</label>
+                                <select id="bmi-category">
+                                <option value="Underweight">Underweight</option>
+                                <option value="Healthy" selected>Healthy</option>
+                                <option value="Overweight">Overweight</option>
+                                <option value="Obese">Obese</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-symptoms">
+
+                        <!-- Ethnicity -->
+                        <div class="section-card" style="margin-bottom: 30px;">
+                            <h3>Ethnicity</h3>
+                            <input type="text" id="ethnicity" value="South Asian">
+                        </div>
+                    </div>
+
+                    <div class="custom-symptoms">
+
+                    <!-- Primary Disease -->
+                    <div class="section-card" style="margin-bottom: 30px;">
+                            <h3>Primary Disease</h3>
+                            <div class="grid-3">
+                            <div>
+                                <label for="disease-name">Name</label>
+                                <input type="text" id="disease-name" value="Human Immunodeficiency Virus (HIV)">
+                            </div>
+                            <div>
+                                <label for="diagnosed-years-ago">Diagnosed (years ago)</label>
+                                <input type="number" id="diagnosed-years-ago" value="5">
+                            </div>
+                            <div>
+                                <label for="disease-prognosis">Prognosis</label>
+                                <select id="disease-prognosis">
+                                <option value="Stable" selected>Stable</option>
+                                <option value="Improving">Improving</option>
+                                <option value="Worsening">Worsening</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-symptoms">
+
+                    <!-- Comorbidities -->
+                    <div class="section-card" style="margin-bottom: 30px;">
+                    <h3>Comorbidities</h3>
+                    
+                    <!-- Container for all comorbidity items -->
+                    <div id="comorbidities-list">
+                        <!-- First comorbidity (example pre-filled) -->
+                        <div class="grid-3 comorbidity-item" style="margin-bottom: 15px;">
+                        <div>
+                            <label for="comorbidity-name-0">Name</label>
+                            <input type="text" id="comorbidity-name-0" name="comorbidities[0][name]" value="Depression">
+                        </div>
+                        <div>
+                            <label for="comorbidity-years-0">Diagnosed (years ago)</label>
+                            <input type="number" id="comorbidity-years-0" name="comorbidities[0][diagnosed_years_ago]" value="3">
+                        </div>
+                        <div>
+                            <label for="comorbidity-prognosis-0">Prognosis</label>
+                            <select id="comorbidity-prognosis-0" name="comorbidities[0][prognosis]">
+                            <option value="Stable">Stable</option>
+                            <option value="Improving" selected>Improving</option>
+                            <option value="Worsening">Worsening</option>
+                            </select>
+                        </div>
+                        <button type="button" class="remove-btn" onclick="removeComorbidity(this)" style="margin-left: 10px;">❌</button>
+                         </div>
+                        </div>
+                    </div>
+
+                    <!-- Add new comorbidity button -->
+                    <button type="button" onclick="addComorbidity()" style="margin-top: 10px;">
+                        + Add Another Comorbidity
+                    </button>
+                    </div>
+
+                    <script>
+                    let comorbidityIndex = 1;
+
+                    function addComorbidity() {
+                        const container = document.getElementById("comorbidities-list");
+
+                        const newItem = document.createElement("div");
+                        newItem.classList.add("grid-3", "comorbidity-item");
+                        newItem.style.marginBottom = "15px";
+                        newItem.innerHTML = `
+                            <div>
+                            <label for="comorbidity-name-${comorbidityIndex}">Name</label>
+                            <input type="text" id="comorbidity-name-${comorbidityIndex}" name="comorbidities[${comorbidityIndex}][name]">
+                            </div>
+                            <div>
+                            <label for="comorbidity-years-${comorbidityIndex}">Diagnosed (years ago)</label>
+                            <input type="number" id="comorbidity-years-${comorbidityIndex}" name="comorbidities[${comorbidityIndex}][diagnosed_years_ago]">
+                            </div>
+                            <div>
+                            <label for="comorbidity-prognosis-${comorbidityIndex}">Prognosis</label>
+                            <select id="comorbidity-prognosis-${comorbidityIndex}" name="comorbidities[${comorbidityIndex}][prognosis]">
+                                <option value="Stable">Stable</option>
+                                <option value="Improving">Improving</option>
+                                <option value="Worsening">Worsening</option>
+                            </select>
+                            </div>
+                            <button type="button" class="remove-btn" onclick="removeComorbidity(this)" style="margin-left: 10px;">❌</button>
+                        `;
+
+                        container.appendChild(newItem);
+                        comorbidityIndex++;
+                    }
+
+                    function removeComorbidity(button) {
+                        const item = button.closest(".comorbidity-item");
+                        if (item) {
+                            item.remove();
+                        }
+                    }
+                    </script>
+
+
+                    </div>                       
+                        <div class="symptom-photo-section">
+                            <h4>Upload Photos (Optional)</h4>
+                            <p class="photo-help-text">Add photos to help describe your symptoms, rashes, injuries, or other visible conditions.</p>
+                            
+                <div class="photo-upload-area">
+                    <label for="symptom-photo-upload" class="photo-upload-label">
+                        <i class="fas fa-camera"></i>
+                        <span>Click to upload photo</span>
+                    </label>
+                    <input
+                        type="file"
+                        id="symptom-photo-upload"
+                        accept="image/*"
+                        multiple
+                        style="display: none;"
+                        onchange="handleSymptomPhotoUpload(event)"
+                    >
+                    <p class="photo-note"><i class="fas fa-info-circle"></i> Note: Testing Llama 4 Scout model for image analysis capabilities</p>
+                </div>
+                            
+                            <div class="symptom-photos-grid" id="symptom-photos-grid">
+                                <!-- Uploaded photos will appear here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="severity-scale">
+                        <h3>Pain/Discomfort Level</h3>
+                        <div class="scale-container">
+                            <input type="range" id="severity-scale" min="1" max="10" value="5">
+                            <div class="scale-labels">
+                                <span>Mild (1)</span>
+                                <span id="severity-value">5</span>
+                                <span>Severe (10)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="continue-btn" onclick="startAIConsultation()">
+                        Start AI Consultation <i class="fas fa-robot"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Chat Section -->
+        <section class="chat-section" id="chat-section" style="display: none;">
+            <div class="container">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <div class="doctor-info">
+                            <div class="doctor-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="doctor-details">
+                                <h3>AI Medical Assistant</h3>
+                                <span class="status">Online</span>
+                            </div>
+                        </div>
+                        <button class="restart-btn" onclick="restartDiagnosis()">
+                            <i class="fas fa-redo"></i> New Diagnosis
+                        </button>
+                    </div>
+                    
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- Messages will be dynamically added here -->
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <div class="chat-input">
+                            <input 
+                                type="text" 
+                                id="user-message" 
+                                placeholder="Type your message or ask questions..."
+                                onkeypress="handleEnterKey(event)"
+                            >
+                                            <label for="photo-upload" class="photo-upload-btn" title="Upload photo for AI analysis">
+                    <i class="fas fa-camera"></i>
+                </label>
+                            <input 
+                                type="file" 
+                                id="photo-upload" 
+                                accept="image/*" 
+                                style="display: none;"
+                                onchange="handlePhotoUpload(event)"
+                            >
+                            <button onclick="sendMessage()" id="send-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="photo-preview" id="photo-preview" style="display: none;">
+                            <img id="preview-image" alt="Preview">
+                            <button onclick="removePhoto()" class="remove-photo-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- API Key Modal -->
+    <div class="modal" id="api-key-modal">
+        <div class="modal-content">
+            <h3>Groq API Key Required</h3>
+            <p>To use the AI consultation feature, please enter your Groq API key:</p>
+            <input type="password" id="api-key-input" placeholder="Enter your Groq API key">
+            <div class="modal-buttons">
+                <button onclick="saveApiKey()">Save</button>
+                <button onclick="closeModal()">Cancel</button>
+            </div>
+            <p class="api-note">
+                Don't have an API key? Get one free at 
+                <a href="https://console.groq.com/" target="_blank">console.groq.com</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- API Key Status Box -->
+    <div class="api-status-box" id="api-status-box">
+        <div class="api-status-header">
+            <i class="fas fa-key"></i>
+            <span>API Key Status</span>
+            <button class="api-status-toggle" onclick="toggleApiStatusBox()">
+                <i class="fas fa-chevron-up" id="api-status-toggle-icon"></i>
+            </button>
+        </div>
+        <div class="api-status-content" id="api-status-content">
+            <div class="api-status-indicator">
+                <div class="status-dot" id="api-status-dot"></div>
+                <span id="api-status-text">Not configured</span>
+            </div>
+            <div class="api-key-input-container">
+                <input 
+                    type="password" 
+                    id="api-key-input-persistent" 
+                    placeholder="Enter your Groq API key"
+                    onkeypress="handleApiKeyEnter(event)"
+                >
+                <button onclick="saveApiKeyPersistent()" class="save-api-btn">
+                    <i class="fas fa-save"></i>
+                </button>
+            </div>
+            <div class="api-key-actions">
+                <button onclick="testApiKey()" class="test-api-btn">
+                    <i class="fas fa-check"></i> Test
+                </button>
+                <button onclick="debugApiKey()" class="debug-api-btn">
+                    <i class="fas fa-bug"></i> Debug
+                </button>
+                <button onclick="clearApiKey()" class="clear-api-btn">
+                    <i class="fas fa-trash"></i> Clear
+                </button>
+                <a href="https://console.groq.com/" target="_blank" class="get-api-link">
+                    <i class="fas fa-external-link-alt"></i> Get API Key
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=1.1"></script>
+</body>
+</html> 

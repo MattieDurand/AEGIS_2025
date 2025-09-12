@@ -1,0 +1,40 @@
+{
+  "age": 60,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 102,
+    "height_cm": 180,
+    "bmi_category": "Obese"
+  },
+  "ethnicity": "Black",
+  "disease": {
+    "name": "Type 2 Diabetes Mellitus",
+    "diagnosed_years_ago": 7,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Non-Alcoholic Fatty Liver Disease",
+      "diagnosed_years_ago": 4,
+      "prognosis": "Improving"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Empagliflozin",
+      "dosage_mg_per_day": 25,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Pioglitazone",
+      "dosage_mg_per_day": 30,
+      "percent_week_administered": 100,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": []
+}

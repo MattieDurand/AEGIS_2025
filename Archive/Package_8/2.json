@@ -1,0 +1,56 @@
+{
+  "age": 76,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 52,
+    "height_cm": 162,
+    "bmi_category": "Underweight"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Lung Cancer",
+    "diagnosed_years_ago": 2,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Ischemic Heart Disease",
+      "diagnosed_years_ago": 6,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Gemcitabine (IV)",
+      "dosage_mg_per_day": 1000,
+      "percent_week_administered": 29,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Carboplatin (IV)",
+      "dosage_mg_per_day": 300,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Nitroglycerin",
+      "dosage_mg_per_day": 0.6,
+      "percent_week_administered": null,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+

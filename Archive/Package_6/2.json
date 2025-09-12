@@ -1,0 +1,32 @@
+{
+  "age": 24,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 59,
+    "height_cm": 178,
+    "bmi_category": "Normal"
+  },
+  "ethnicity": "East Asian",
+  "disease": {
+    "name": "Hyperthyroidism",
+    "diagnosed_years_ago": 0.8,
+    "prognosis": "Improving"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Propylthiouracil",
+      "dosage_mg_per_day": 40,
+      "percent_week_administered": 300,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+

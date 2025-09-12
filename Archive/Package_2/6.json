@@ -1,0 +1,61 @@
+{
+  "age": 15,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 63,
+    "height_cm": 172,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "East Asian",
+  "disease": {
+    "name": "Acute myeloid leukaemia of childhood",
+    "diagnosed_years_ago": 6,
+    "prognosis": "Terminal"
+  },
+  "comorbidities": [
+    {
+      "name": "Chronic Graft vs Host Disease",
+      "diagnosed_years_ago": 1,
+      "prognosis": "Worsening"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Cytarabine",
+      "dosage_mg_per_day": 115,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Daunorubicin",
+      "dosage_mg_per_day": 14,
+      "percent_week_administered": 43,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Mycophenolate mofetil",
+      "dosage_mg_per_day": 15,
+      "percent_week_administered": 200,
+      "indication": "Comorbidity"
+    },
+    {
+      "treatment_name": "Prednisone",
+      "dosage_mg_per_day": 63,
+      "percent_week_administered": 100,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "variant_name": "TP53 R175H",
+      "associated_risks": ["Poor prognosis in AML"]
+    }
+  ]
+}
+
+
+
+

@@ -1,0 +1,52 @@
+{
+  "age": 32,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 68,
+    "height_cm": 165,
+    "bmi_category": "Normal"
+  },
+  "ethnicity": "South Asian",
+  "disease": {
+    "name": "Multidrug Resistant Tuberculosis",
+    "diagnosed_years_ago": 1.5,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "HIV",
+      "diagnosed_years_ago": 3,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Levofloxacin",
+      "dosage_mg_per_day": 750,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Linezolid",
+      "dosage_mg_per_day": 600,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Dolutegravir",
+      "dosage_mg_per_day": 30,
+      "percent_week_administered": 200,
+      "indication": "Secondary"
+    },
+    {
+      "treatment_name": "Lamivudine",
+      "dosage_mg_per_day": 300,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}

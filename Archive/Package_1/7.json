@@ -1,0 +1,36 @@
+{
+  "age": 65,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 75,
+    "height_cm": 170,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "Hispanic",
+  "disease": {
+    "name": "Type 2 Diabetes Mellitus",
+    "diagnosed_years_ago": 6,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Metformin",
+      "dosage_mg_per_day": 1500,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "variant_name": "SLC22A1 rs622342",
+      "associated_risks": ["Altered metformin transport"]
+    }
+  ]
+}
+
+
+

@@ -1,0 +1,56 @@
+{
+  "age": 13,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 43,
+    "height_cm": 146,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Acute myeloid leukaemia of childhood",
+    "diagnosed_years_ago": 5,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Anaemia",
+      "diagnosed_years_ago": 2,
+      "prognosis": "Stable"
+    },
+    {
+      "name": "Immunodeficiency",
+      "diagnosed_years_ago": 1,
+      "prognosis": "Worsening"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Cytarabine",
+      "dosage_mg_per_day": 125,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Idarubicin",
+      "dosage_mg_per_day": 12,
+      "percent_week_administered": 50,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Pegfilgrastim",
+      "dosage_mg_per_day": 4,
+      "percent_week_administered": 15,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "variant_name": "POR rs2868177",
+      "associated_risks": ["Anthracycline cardiotoxicity risk"]
+    }
+  ]
+}

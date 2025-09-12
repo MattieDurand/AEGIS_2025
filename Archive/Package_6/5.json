@@ -1,0 +1,47 @@
+{
+  "age": 62,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 72,
+    "height_cm": 159,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "Hispanic",
+  "disease": {
+    "name": "Hyperthyroidism",
+    "diagnosed_years_ago": 10,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Osteoporosis",
+      "diagnosed_years_ago": 4,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Radioactive Iodine Therapy",
+      "dosage_mg_per_day": null,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Alendronate",
+      "dosage_mg_per_day": 70,
+      "percent_week_administered": 14,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+{
+  "age": 67,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 86,
+    "height_cm": 175,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Chronic Obstructive Pulmonary Disease",
+    "diagnosed_years_ago": 4,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [],
+    
+  "treatments": [
+    {
+      "treatment_name": "Salmeterol",
+      "dosage_mg_per_day": 0.05,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Glycopyrronium Bromide",
+      "dosage_mg_per_day": 0.055,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Amoxicillin",
+      "dosage_mg_per_day": 1000,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+

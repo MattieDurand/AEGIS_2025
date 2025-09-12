@@ -1,0 +1,62 @@
+{
+  "age": 34,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 59,
+    "height_cm": 168,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "South Asian",
+  "disease": {
+    "name": "Human Immunodeficiency Virus (HIV)",
+    "diagnosed_years_ago": 5,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Depression",
+      "diagnosed_years_ago": 3,
+      "prognosis": "Improving"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Bictegravir",
+      "dosage_mg_per_day": 50,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Emtricitabine",
+      "dosage_mg_per_day": 200,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Tenofovir alafenamide",
+      "dosage_mg_per_day": 25,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Sertraline",
+      "dosage_mg_per_day": 50,
+      "percent_week_administered": 100,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+

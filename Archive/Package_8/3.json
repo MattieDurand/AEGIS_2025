@@ -1,0 +1,44 @@
+{
+  "age": 58,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 74,
+    "height_cm": 170,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "East Asian",
+  "disease": {
+    "name": "Lung Cancer",
+    "diagnosed_years_ago": 1,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Osimertinib (Oral)",
+      "dosage_mg_per_day": 80,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "EGFR",
+      "variant": "exon 19 deletion",
+      "effect": "Sensitising mutation — predicts response to EGFR TKIs (e.g., osimertinib)"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+

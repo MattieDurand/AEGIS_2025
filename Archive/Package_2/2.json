@@ -1,0 +1,40 @@
+{
+  "age": 11,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 37.8,
+    "height_cm": 142,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "South Asian",
+  "disease": {
+    "name": "Acute myeloid leukaemia of childhood",
+    "diagnosed_years_ago": 1,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Cytarabine",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Daunorubicin",
+      "dosage_mg_per_day": 45,
+      "percent_week_administered": 43,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Levofloxacin",
+      "dosage_mg_per_day": 500,
+      "percent_week_administered": 100,
+      "indication": "Other"
+    }
+  ],
+  "genetic_variants": []
+}

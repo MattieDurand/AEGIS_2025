@@ -1,0 +1,53 @@
+{
+  "age": 12,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 33,
+    "height_cm": 150,
+    "bmi_category": "Underweight"
+  },
+  "ethnicity": "Hispanic",
+  "disease": {
+    "name": "Acute myeloid leukaemia of childhood",
+    "diagnosed_years_ago": 4,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Type 1 Diabetes",
+      "diagnosed_years_ago": 6,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Cytarabine",
+      "dosage_mg_per_day": 95,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Daunorubicin",
+      "dosage_mg_per_day": 50,
+      "percent_week_administered": 29,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Insulin",
+      "dosage_mg_per_day": 0.07,
+      "percent_week_administered": 700,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "variant_name": "CBR3 V244M",
+      "associated_risks": ["Increased anthracycline cardiotoxicity"]
+    }
+  ]
+}
+
+

@@ -1,0 +1,46 @@
+{
+  "age": 27,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": "Androgen Insensitivity Syndrome"
+  },
+  "weight": {
+    "weight_kg": 49,
+    "height_cm": 160,
+    "bmi_category": "Underweight"
+  },
+  "ethnicity": "East Asian",
+  "disease": {
+    "name": "Multidrug Resistant Tuberculosis",
+    "diagnosed_years_ago": 2,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Iron Deficiency Anemia",
+      "diagnosed_years_ago": 1,
+      "prognosis": "Improving"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Delamanid",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Clofazimine",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Ferrous Sulfate",
+      "dosage_mg_per_day": 325,
+      "percent_week_administered": 50,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}

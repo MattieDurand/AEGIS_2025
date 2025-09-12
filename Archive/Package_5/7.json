@@ -1,0 +1,49 @@
+{
+  "age": 39,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 95,
+    "height_cm": 168,
+    "bmi_category": "Obese"
+  },
+  "ethnicity": "Middle Eastern",
+  "disease": {
+    "name": "Multidrug Resistant Tuberculosis",
+    "diagnosed_years_ago": 4,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Non-alcoholic Fatty Liver Disease",
+      "diagnosed_years_ago": 2,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Bedaquiline",
+      "dosage_mg_per_day": 200,
+      "percent_week_administered": 43,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Clofazimine",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Ursodeoxycholic Acid",
+      "dosage_mg_per_day": 900,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+

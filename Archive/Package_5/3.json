@@ -1,0 +1,47 @@
+{
+  "age": 45,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 82,
+    "height_cm": 176,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "Hispanic",
+  "disease": {
+    "name": "Multidrug Resistant Tuberculosis",
+    "diagnosed_years_ago": 5,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Type 2 Diabetes Mellitus",
+      "diagnosed_years_ago": 7,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Bedaquiline",
+      "dosage_mg_per_day": 200,
+      "percent_week_administered": 43,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Cycloserine",
+      "dosage_mg_per_day": 20,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Metformin",
+      "dosage_mg_per_day": 500,
+      "percent_week_administered": 200,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+

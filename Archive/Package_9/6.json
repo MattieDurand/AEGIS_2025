@@ -1,0 +1,52 @@
+{
+  "age": 46,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 73,
+    "height_cm": 172,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "East Asian",
+  "disease": {
+    "name": "Breast Cancer",
+    "diagnosed_years_ago": 2,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Hyperlipidemia",
+      "diagnosed_years_ago": 8,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Letrozole",
+      "dosage_mg_per_day": 2.5,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Atorvastatin",
+      "dosage_mg_per_day": 20,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+
+

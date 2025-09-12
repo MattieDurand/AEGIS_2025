@@ -1,0 +1,59 @@
+{
+  "age": 29,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 52,
+    "height_cm": 166,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "Hispanic",
+  "disease": {
+    "name": "COVID-19",
+    "diagnosed_years_ago": 0.03,
+    "prognosis": "Improving"
+  },
+  "comorbidities": [
+    {
+      "name": "Asthma",
+      "diagnosed_years_ago": 20,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Remdesivir (IV)",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Amlodipine",
+      "dosage_mg_per_day": 5,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    },
+    {
+      "treatment_name": "Salbutamol (Nebulised)",
+      "dosage_mg_per_day": 2.5,
+      "percent_week_administered": 29,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

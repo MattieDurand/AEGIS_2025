@@ -1,0 +1,58 @@
+{
+  "age": 70,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 90,
+    "height_cm": 175,
+    "bmi_category": "Obese"
+  },
+  "ethnicity": "South Asian",
+  "disease": {
+    "name": "COVID-19",
+    "diagnosed_years_ago": 0.08,
+    "prognosis": "Terminal"
+  },
+  "comorbidities": [
+    {
+      "name": "Type 2 Diabetes Mellitus",
+      "diagnosed_years_ago": 18,
+      "prognosis": "Worsening"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Dexamethasone (IV)",
+      "dosage_mg_per_day": 6,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Insulin Glargine",
+      "dosage_mg_per_day": 1.2,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "ACE2",
+      "variant": "rs2285666 T/T",
+      "effect": "Reported association with altered ACE2 expression; associated with heightened susceptibility"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+

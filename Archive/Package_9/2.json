@@ -1,0 +1,56 @@
+{
+  "age": 52,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 62,
+    "height_cm": 170,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Breast Cancer",
+    "diagnosed_years_ago": 3,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Hypertension",
+      "diagnosed_years_ago": 6,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Anastrozole",
+      "dosage_mg_per_day": 1,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Amlodipine",
+      "dosage_mg_per_day": 5,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "BRCA2",
+      "variant": "c.6174delT",
+      "effect": "Frameshift mutation associated with hereditary breast cancer susceptibility"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+

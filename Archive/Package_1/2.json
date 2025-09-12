@@ -1,0 +1,50 @@
+{
+  "age": 72,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 64,
+    "height_cm": 158,
+    "bmi_category": "Overweight"
+  },
+  "ethnicity": "White European",
+  "disease": {
+    "name": "Type 2 Diabetes Mellitus",
+    "diagnosed_years_ago": 12,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Osteoarthritis",
+      "diagnosed_years_ago": 10,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Metformin",
+      "dosage_mg_per_day": 1000,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Dulaglutide",
+      "dosage_mg_per_day": 1.5,
+      "percent_week_administered": 14,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Paracetamol",
+      "dosage_mg_per_day": 2000,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "variant_name": "TCF7L2 rs7903146",
+      "associated_risks": ["Increased T2DM susceptibility"]
+    }
+  ]
+}

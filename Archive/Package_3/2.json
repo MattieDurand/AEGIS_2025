@@ -1,0 +1,44 @@
+{
+  "age": 74,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 59,
+    "height_cm": 161,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "Middle Eastern",
+  "disease": {
+    "name": "Chronic Obstructive Pulmonary Disease",
+    "diagnosed_years_ago": 7,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Osteoporosis",
+      "diagnosed_years_ago": 5,
+      "prognosis": "Worsening"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Tiotropium",
+      "dosage_mg_per_day": 0.0015,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Alendronic Acid",
+      "dosage_mg_per_day": 10,
+      "percent_week_administered": 100,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+

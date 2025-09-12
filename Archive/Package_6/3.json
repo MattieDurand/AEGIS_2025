@@ -1,0 +1,45 @@
+{
+  "age": 47,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 80,
+    "height_cm": 165,
+    "bmi_category": "Obese"
+  },
+  "ethnicity": "Black",
+  "disease": {
+    "name": "Hyperthyroidism",
+    "diagnosed_years_ago": 5,
+    "prognosis": "Worsening"
+  },
+  "comorbidities": [
+    {
+      "name": "Type 2 Diabetes",
+      "diagnosed_years_ago": 7,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Radioactive Iodine Therapy",
+      "dosage_mg_per_day": null,
+      "percent_week_administered": null,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Metformin",
+      "dosage_mg_per_day": 1500,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+

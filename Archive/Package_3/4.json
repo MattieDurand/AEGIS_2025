@@ -1,0 +1,46 @@
+{
+  "age": 69,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 70,
+    "height_cm": 172,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "East Asian",
+  "disease": {
+    "name": "Chronic Obstructive Pulmonary Disease",
+    "diagnosed_years_ago": 6,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [
+    {
+      "name": "Hypertension",
+      "diagnosed_years_ago": 8,
+      "prognosis": "Stable"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Aclidinium Bromide",
+      "dosage_mg_per_day": 0.4,
+      "percent_week_administered": 200,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Losartan",
+      "dosage_mg_per_day": 50,
+      "percent_week_administered": 100,
+      "indication": "Comorbidity"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+

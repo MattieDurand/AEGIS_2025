@@ -1,0 +1,43 @@
+{
+  "age": 64,
+  "gender": {
+    "category": "Female",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 62,
+    "height_cm": 165,
+    "bmi_category": "Healthy"
+  },
+  "ethnicity": "Indigenous Australian",
+  "disease": {
+    "name": "Chronic Obstructive Pulmonary Disease",
+    "diagnosed_years_ago": 4,
+    "prognosis": "Stable"
+  },
+  "comorbidities": [],
+  "treatments": [
+    {
+      "treatment_name": "Umeclidinium",
+      "dosage_mg_per_day": 0.0625,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Vilanterol",
+      "dosage_mg_per_day": 0.025,
+      "percent_week_administered": 100,
+      "indication": "Primary"
+    }
+  ],
+  "genetic_variants": []
+}
+
+
+
+
+
+
+
+
+

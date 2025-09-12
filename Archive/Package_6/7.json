@@ -1,0 +1,66 @@
+{
+  "age": 55,
+  "gender": {
+    "category": "Male",
+    "intersex_condition": null
+  },
+  "weight": {
+    "weight_kg": 85,
+    "height_cm": 175,
+    "bmi_category": "Obese"
+  },
+  "ethnicity": "Middle Eastern",
+  "disease": {
+    "name": "Hyperthyroidism",
+    "diagnosed_years_ago": 7,
+    "prognosis": "Terminal"
+  },
+  "comorbidities": [
+    {
+      "name": "Congestive Heart Failure",
+      "diagnosed_years_ago": 2,
+      "prognosis": "Worsening"
+    }
+  ],
+  "treatments": [
+    {
+      "treatment_name": "Propylthiouracil",
+      "dosage_mg_per_day": 100,
+      "percent_week_administered": 800,
+      "indication": "Primary"
+    },
+    {
+      "treatment_name": "Furosemide",
+      "dosage_mg_per_day": 40,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    },
+    {
+      "treatment_name": "Spironolactone",
+      "dosage_mg_per_day": 25,
+      "percent_week_administered": 100,
+      "indication": "Secondary"
+    }
+  ],
+  "genetic_variants": [
+    {
+      "gene": "CYP2D6",
+      "variant": "*4/*5",
+      "effect": "Poor metabolizer; may impact beta-blockers or other adjunct therapies"
+    },
+    {
+      "gene": "TSHR",
+      "variant": "rs2268458",
+      "effect": "Associated with increased hyperthyroidism risk"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
