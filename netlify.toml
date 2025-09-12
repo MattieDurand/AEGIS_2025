@@ -1,4 +1,11 @@
 [build]
-  base = "frontend/online-doctor-main"
+  base = "frontend/online-doctor-main"   # project root (where package.json lives)
   command = "npm install && npm run build"
-  publish = "frontend/online-doctor-main/dist"
+  publish = "frontend/online-doctor-main/dist"   # output folder after build
+
+[functions]
+  directory = "netlify/functions"
+
+[template.environment]
+  GROQ_API_KEY = "Set this in Netlify dashboard (Site Settings → Environment variables)"
+
