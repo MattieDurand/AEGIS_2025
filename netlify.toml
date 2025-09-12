@@ -1,7 +1,7 @@
 [build]
-  base = "frontend/online-doctor-main"   # project root (where package.json lives)
+  base = "frontend/online-doctor-main"
   command = "npm install && npm run build"
-  publish = "frontend/online-doctor-main/dist"   # output folder after build
+  publish = "dist"   # relative to base, so no need to repeat full path
 
 [functions]
   directory = "netlify/functions"
