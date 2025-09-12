@@ -1,9 +1,12 @@
 import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 export default defineConfig({
-  root: 'public',       // 👈 tells Vite index.html is inside /public
+  root: resolve(__dirname, 'public'),  // use absolute path
   build: {
-    outDir: '../dist',  // output into /frontend/online-doctor-main/dist
+    outDir: resolve(__dirname, 'dist'), // keep dist inside online-doctor-main
     emptyOutDir: true
-  }
+  },
+  publicDir: resolve(__dirname, 'public/assets') // optional: if you keep extra static files
 })
+
