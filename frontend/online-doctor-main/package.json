@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "AI-powered online doctor for initial diagnosis and medical assistance",
   "main": "public/index.html",
-  },
+  }
   "scripts": {
   "dev": "vite",                // optional for local development
   "start": "vite",              // what you used locally
