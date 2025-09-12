@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "AI-powered online doctor for initial diagnosis and medical assistance",
   "main": "public/index.html",
-  "scripts": {
-    "start": "npx http-server public -p 8080 -o",
-    "dev": "npx http-server public -p 8080 -o -c-1"
   },
+  "scripts": {
+  "dev": "vite",                // optional for local development
+  "start": "vite",              // what you used locally
+  "build": "vite build",        // 👈 required for Netlify
+  "preview": "vite preview"     // optional for local preview
+  }
   "keywords": ["ai", "medical", "diagnosis", "healthcare", "groq"],
   "author": "",
   "license": "MIT",
