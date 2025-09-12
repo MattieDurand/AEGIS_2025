@@ -1,12 +1,4 @@
 [build]
-  command = "cd frontend && npm install && npm run build"
-  publish = "frontend/dist"
-
-[functions]
-  directory = "netlify/functions"
-
-[dev]
-  command = "cd frontend && npm run dev"
-  targetPort = 5173
-  port = 8888
-
+  base = "frontend/online-doctor-main"
+  command = "npm install && npm run build"
+  publish = "frontend/online-doctor-main/dist"
