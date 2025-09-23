@@ -1,0 +1,1 @@
+This is a file that resets the netlify upload  of the client
