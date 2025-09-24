@@ -1,4 +1,6 @@
 [build]
+  base = "frontend/online-doctor-main"
   command = "npm install && npm run build"
-  publish = "frontend/online-doctor-main/dist"
-  functions = "frontend/online-doctor-main/functions"
+  publish = "dist"
+  functions = "netlify/functions"
+
