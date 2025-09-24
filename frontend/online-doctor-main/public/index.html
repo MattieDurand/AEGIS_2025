@@ -276,40 +276,62 @@
       </div>
     </section>
 
-    <!-- AI Chat Section -->
-    <section class="chat-section" id="chat-section" style="display: none;">
-      <div class="container">
-        <div class="chat-container">
-          <div class="chat-header">
-            <div class="doctor-info">
-              <div class="doctor-avatar"><i class="fas fa-robot"></i></div>
-              <div class="doctor-details">
-                <h3>AI Medical Assistant</h3>
-                <span class="status">Online</span>
+      <!-- AI Chat Section -->
+      <section class="chat-section" id="chat-section" style="display: none;">
+        <div class="container">
+          <div class="chat-container">
+            <div class="chat-header">
+              <div class="doctor-info">
+                <div class="doctor-avatar">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <div class="doctor-details">
+                  <h3>AI Medical Assistant</h3>
+                  <span class="status">Online</span>
+                </div>
               </div>
+              <button class="restart-btn" onclick="restartDiagnosis()">
+                <i class="fas fa-redo"></i> New Diagnosis
+              </button>
             </div>
-            <button class="restart-btn" onclick="restartDiagnosis()">
-              <i class="fas fa-redo"></i> New Diagnosis
-            </button>
-          </div>
-          <div class="chat-messages" id="chat-messages"></div>
-          <div class="chat-input-container">
-            <div class="chat-input">
-              <input type="text" id="user-message" placeholder="Type your message or ask questions..." onkeypress="handleEnterKey(event)">
-              <label for="photo-upload" class="photo-upload-btn" title="Upload photo for AI analysis">
-                <i class="fas fa-camera"></i>
-              </label>
-              <input type="file" id="photo-upload" accept="image/*" style="display: none;" onchange="handlePhotoUpload(event)">
-              <button onclick="sendMessage()" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+
+            <div class="chat-messages" id="chat-messages">
+              <!-- Messages will be dynamically added here -->
             </div>
-            <div class="photo-preview" id="photo-preview" style="display: none;">
-              <img id="preview-image" alt="Preview">
-              <button onclick="removePhoto()" class="remove-photo-btn"><i class="fas fa-times"></i></button>
+
+            <div class="chat-input-container">
+              <div class="chat-input">
+                <input
+                  type="text"
+                  id="user-message"
+                  placeholder="Type your message or ask questions..."
+                  onkeypress="handleEnterKey(event)"
+                >
+                <label for="photo-upload" class="photo-upload-btn" title="Upload photo for AI analysis">
+                  <i class="fas fa-camera"></i>
+                </label>
+                <input
+                  type="file"
+                  id="photo-upload"
+                  accept="image/*"
+                  style="display: none;"
+                  onchange="handlePhotoUpload(event)"
+                >
+                <button onclick="sendMessage()" id="send-btn">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+
+              <div class="photo-preview" id="photo-preview" style="display: none;">
+                <img id="preview-image" alt="Preview">
+                <button onclick="removePhoto()" class="remove-photo-btn">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   </main>
 
   <!-- API Status Box -->
