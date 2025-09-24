@@ -1,6 +1,4 @@
 // netlify/functions/groq-proxy.js
-import { GROQ_API_KEY } from "../../frontend/online-doctor-main/config.js";
-
 export async function handler(event) {
   if (event.httpMethod !== "POST") {
     return {
@@ -16,15 +14,23 @@ export async function handler(event) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${GROQ_API_KEY}`, // directly included
+        "Authorization": `Bearer ${process.env.GROQ_API_KEY}`, // stays hidden in Netlify
       },
       body: JSON.stringify(body),
     });
 
     const data = await response.json();
-    return { statusCode: 200, body: JSON.stringify(data) };
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(data),
+    };
   } catch (err) {
-    return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
+    console.error("Groq Proxy Error:", err);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Failed to reach Groq API" }),
+    };
   }
 }
 
