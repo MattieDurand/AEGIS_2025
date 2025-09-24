@@ -340,7 +340,8 @@
   <!-- Connection + control scripts -->
   <script>
     let groqConnected = false;
-
+    let selectedBodyArea = null;
+  
     async function testGroqProxy() {
       try {
         const res = await fetch("/.netlify/functions/groq-proxy", {
@@ -380,8 +381,40 @@
       document.getElementById("body-selection").style.display = "block";
     }
 
-    // Run test on load
-    testGroqProxy();
+    // --- BODY SELECTION HANDLING ---
+    function setupBodySelection() {
+      const bodyParts = document.querySelectorAll(".body-part");
+      bodyParts.forEach(part => {
+        part.addEventListener("click", () => {
+          // remove highlight from others
+          bodyParts.forEach(p => p.classList.remove("selected"));
+          // mark clicked one
+          part.classList.add("selected");
+          selectedBodyArea = part.getAttribute("id") || part.dataset.name || "Unknown";
+
+          console.log("Selected body area:", selectedBodyArea);
+
+          // enable continue button
+          document.getElementById("continue-to-symptoms").disabled = false;
+        });
+      });
+
+      // Continue button click
+      document.getElementById("continue-to-symptoms").addEventListener("click", () => {
+        if (!selectedBodyArea) {
+          alert("Please select a body area before continuing.");
+          return;
+        }
+        document.getElementById("body-selection").style.display = "none";
+        document.getElementById("symptom-selection").style.display = "block";
+      });
+    }
+
+    // --- INIT ---
+    document.addEventListener("DOMContentLoaded", () => {
+      setupBodySelection();
+      testGroqProxy();
+    });
   </script>
 
   <script src="script.js?v=1.1"></script>
