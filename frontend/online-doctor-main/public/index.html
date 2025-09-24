@@ -9,415 +9,142 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <i class="fas fa-user-md"></i>
-        <h1>AI Doctor</h1>
-      </div>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#how-it-works">How it Works</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <!-- HEADER -->
+  <header id="header">
+    <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="logo" />
+    <h1>AI Online Doctor</h1>
   </header>
 
-  <!-- Main Content -->
-  <main class="main">
-    <!-- Welcome Section -->
-    <section class="welcome-section" id="welcome">
-      <div class="container">
-        <div class="welcome-content">
-          <h2>Get Medical Assistance Anytime, Anywhere</h2>
-          <p>Select the body area where you're experiencing symptoms and get AI-powered medical guidance.</p>
-          <div class="api-key-notice" id="api-key-notice" style="display: none;">
-            <p><i class="fas fa-info-circle"></i> Please configure your API key in the bottom left corner to continue.</p>
-          </div>
-          <button class="cta-button" onclick="startDiagnosis()">
-            <i class="fas fa-stethoscope"></i> Start Diagnosis
-          </button>
-        </div>
-      </div>
+  <!-- CONNECTION STATUS -->
+  <div id="connection-status">
+    <div class="loader"></div>
+    <p>Checking Groq API connection...</p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-container" style="display:none;">
+    <!-- Body Part Selection -->
+    <section id="body-part-selection" class="active">
+      <div class="card" onclick="goToSymptoms('Head')"><i class="fa-solid fa-user"></i> Head</div>
+      <div class="card" onclick="goToSymptoms('Chest')"><i class="fa-solid fa-heart"></i> Chest</div>
+      <div class="card" onclick="goToSymptoms('Abdomen')"><i class="fa-solid fa-stomach"></i> Abdomen</div>
+      <div class="card" onclick="goToSymptoms('Leg')"><i class="fa-solid fa-walking"></i> Leg</div>
     </section>
 
-    <!-- Body Selection Section -->
-    <section class="body-selection-section" id="body-selection" style="display: none;">
-      <div class="container">
-        <h2>Select the affected body area</h2>
-        <div class="body-diagram-container">
-          <div class="body-diagram">
-            <svg viewBox="0 0 200 400" class="body-svg">
-              <!-- Head -->
-              <ellipse cx="100" cy="30" rx="25" ry="30" class="body-part" data-area="head" id="head"/>
-              <text x="100" y="35" text-anchor="middle" class="body-label">Head</text>
-              <!-- Neck -->
-              <rect x="85" y="55" width="30" height="15" class="body-part" data-area="neck" id="neck"/>
-              <text x="100" y="67" text-anchor="middle" class="body-label">Neck</text>
-              <!-- Chest -->
-              <ellipse cx="100" cy="100" rx="40" ry="35" class="body-part" data-area="chest" id="chest"/>
-              <text x="100" y="105" text-anchor="middle" class="body-label">Chest</text>
-              <!-- Left Arm -->
-              <ellipse cx="50" cy="120" rx="15" ry="45" class="body-part" data-area="left-arm" id="left-arm"/>
-              <text x="50" y="125" text-anchor="middle" class="body-label">L.Arm</text>
-              <!-- Right Arm -->
-              <ellipse cx="150" cy="120" rx="15" ry="45" class="body-part" data-area="right-arm" id="right-arm"/>
-              <text x="150" y="125" text-anchor="middle" class="body-label">R.Arm</text>
-              <!-- Abdomen -->
-              <ellipse cx="100" cy="170" rx="35" ry="30" class="body-part" data-area="abdomen" id="abdomen"/>
-              <text x="100" y="175" text-anchor="middle" class="body-label">Abdomen</text>
-              <!-- Left Leg -->
-              <ellipse cx="80" cy="280" rx="18" ry="80" class="body-part" data-area="left-leg" id="left-leg"/>
-              <text x="80" y="285" text-anchor="middle" class="body-label">L.Leg</text>
-              <!-- Right Leg -->
-              <ellipse cx="120" cy="280" rx="18" ry="80" class="body-part" data-area="right-leg" id="right-leg"/>
-              <text x="120" y="285" text-anchor="middle" class="body-label">R.Leg</text>
-            </svg>
-          </div>
-          <div class="selected-area">
-            <h3>Selected Area: <span id="selected-area-name">None</span></h3>
-            <button class="continue-btn" id="continue-to-symptoms" disabled onclick="showSymptoms()">
-              Continue to Symptoms <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Symptoms Section -->
-    <section class="symptoms-section" id="symptoms-section" style="display: none;">
-      <h2>Describe your symptoms</h2>
-      <div class="container">
-        <div class="symptoms-container">
-          <div class="common-symptoms">
-            <h3>Common Symptoms (click to select)</h3>
-            <div class="symptom-tags" id="symptom-tags"></div>
-          </div>
-
-          <div class="custom-symptoms">
-            <!-- Patient Information -->
-            <div class="section-card" style="margin-bottom: 30px;">
-              <h3>Patient Information</h3>
-              <div class="grid-2">
-                <div>
-                  <label for="age">Age</label>
-                  <input type="number" id="age" value="34">
-                </div>
-                <div>
-                  <label for="gender">Gender</label>
-                  <select id="gender">
-                    <option value="Female" selected>Female</option>
-                    <option value="Male">Male</option>
-                    <option value="Non-binary">Non-binary</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="intersex-condition">Intersex Condition</label>
-                  <input type="text" id="intersex-condition" placeholder="Optional">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Weight & Height -->
-          <div class="custom-symptoms">
-            <div class="section-card" style="margin-bottom: 30px;">
-              <h3>Weight & Height</h3>
-              <div class="grid-3">
-                <div>
-                  <label for="weight-kg">Weight (kg)</label>
-                  <input type="number" id="weight-kg" value="59">
-                </div>
-                <div>
-                  <label for="height-cm">Height (cm)</label>
-                  <input type="number" id="height-cm" value="168">
-                </div>
-                <div>
-                  <label for="bmi-category">BMI Category</label>
-                  <select id="bmi-category">
-                    <option value="Underweight">Underweight</option>
-                    <option value="Healthy" selected>Healthy</option>
-                    <option value="Overweight">Overweight</option>
-                    <option value="Obese">Obese</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Ethnicity -->
-          <div class="custom-symptoms">
-            <div class="section-card" style="margin-bottom: 30px;">
-              <h3>Ethnicity</h3>
-              <input type="text" id="ethnicity" value="South Asian">
-            </div>
-          </div>
-
-          <!-- Primary Disease -->
-          <div class="custom-symptoms">
-            <div class="section-card" style="margin-bottom: 30px;">
-              <h3>Primary Disease</h3>
-              <div class="grid-3">
-                <div>
-                  <label for="disease-name">Name</label>
-                  <input type="text" id="disease-name" value="Human Immunodeficiency Virus (HIV)">
-                </div>
-                <div>
-                  <label for="diagnosed-years-ago">Diagnosed (years ago)</label>
-                  <input type="number" id="diagnosed-years-ago" value="5">
-                </div>
-                <div>
-                  <label for="disease-prognosis">Prognosis</label>
-                  <select id="disease-prognosis">
-                    <option value="Stable" selected>Stable</option>
-                    <option value="Improving">Improving</option>
-                    <option value="Worsening">Worsening</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Comorbidities -->
-          <div class="custom-symptoms">
-            <div class="section-card" style="margin-bottom: 30px;">
-              <h3>Comorbidities</h3>
-              <div id="comorbidities-list">
-                <div class="grid-3 comorbidity-item" style="margin-bottom: 15px;">
-                  <div>
-                    <label for="comorbidity-name-0">Name</label>
-                    <input type="text" id="comorbidity-name-0" name="comorbidities[0][name]" value="Depression">
-                  </div>
-                  <div>
-                    <label for="comorbidity-years-0">Diagnosed (years ago)</label>
-                    <input type="number" id="comorbidity-years-0" name="comorbidities[0][diagnosed_years_ago]" value="3">
-                  </div>
-                  <div>
-                    <label for="comorbidity-prognosis-0">Prognosis</label>
-                    <select id="comorbidity-prognosis-0" name="comorbidities[0][prognosis]">
-                      <option value="Stable">Stable</option>
-                      <option value="Improving" selected>Improving</option>
-                      <option value="Worsening">Worsening</option>
-                    </select>
-                  </div>
-                  <button type="button" class="remove-btn" onclick="removeComorbidity(this)" style="margin-left: 10px;">❌</button>
-                </div>
-              </div>
-            </div>
-            <button type="button" onclick="addComorbidity()" style="margin-top: 10px;"> + Add Another Comorbidity </button>
-          </div>
-
-          <!-- JS for comorbidities -->
-          <script>
-            let comorbidityIndex = 1;
-            function addComorbidity() {
-              const container = document.getElementById("comorbidities-list");
-              const newItem = document.createElement("div");
-              newItem.classList.add("grid-3", "comorbidity-item");
-              newItem.style.marginBottom = "15px";
-              newItem.innerHTML = `
-                <div>
-                  <label for="comorbidity-name-${comorbidityIndex}">Name</label>
-                  <input type="text" id="comorbidity-name-${comorbidityIndex}" name="comorbidities[${comorbidityIndex}][name]">
-                </div>
-                <div>
-                  <label for="comorbidity-years-${comorbidityIndex}">Diagnosed (years ago)</label>
-                  <input type="number" id="comorbidity-years-${comorbidityIndex}" name="comorbidities[${comorbidityIndex}][diagnosed_years_ago]">
-                </div>
-                <div>
-                  <label for="comorbidity-prognosis-${comorbidityIndex}">Prognosis</label>
-                  <select id="comorbidity-prognosis-${comorbidityIndex}" name="comorbidities[${comorbidityIndex}][prognosis]">
-                    <option value="Stable">Stable</option>
-                    <option value="Improving">Improving</option>
-                    <option value="Worsening">Worsening</option>
-                  </select>
-                </div>
-                <button type="button" class="remove-btn" onclick="removeComorbidity(this)" style="margin-left: 10px;">❌</button>
-              `;
-              container.appendChild(newItem);
-              comorbidityIndex++;
-            }
-            function removeComorbidity(button) {
-              const item = button.closest(".comorbidity-item");
-              if (item) item.remove();
-            }
-          </script>
-
-          <!-- Photo Upload -->
-          <div class="symptom-photo-section">
-            <h4>Upload Photos (Optional)</h4>
-            <p class="photo-help-text">Add photos to help describe your symptoms, rashes, injuries, or other visible conditions.</p>
-            <div class="photo-upload-area">
-              <label for="symptom-photo-upload" class="photo-upload-label">
-                <i class="fas fa-camera"></i> <span>Click to upload photo</span>
-              </label>
-              <input type="file" id="symptom-photo-upload" accept="image/*" multiple style="display: none;" onchange="handleSymptomPhotoUpload(event)">
-              <p class="photo-note"><i class="fas fa-info-circle"></i> Note: Testing Llama 4 Scout model for image analysis capabilities</p>
-            </div>
-            <div class="symptom-photos-grid" id="symptom-photos-grid"></div>
-          </div>
-        </div>
-
-        <!-- Pain Severity -->
-        <div class="severity-scale">
-          <h3>Pain/Discomfort Level</h3>
-          <div class="scale-container">
-            <input type="range" id="severity-scale" min="1" max="10" value="5">
-            <div class="scale-labels">
-              <span>Mild (1)</span>
-              <span id="severity-value">5</span>
-              <span>Severe (10)</span>
-            </div>
-          </div>
-        </div>
-        <button class="continue-btn" onclick="startAIConsultation()"> Start AI Consultation <i class="fas fa-robot"></i> </button>
-      </div>
-    </section>
-
-    <!-- AI Chat Section -->
-    <section class="chat-section" id="chat-section" style="display: none;">
-      <div class="container">
-        <div class="chat-container">
-          <div class="chat-header">
-            <div class="doctor-info">
-              <div class="doctor-avatar"><i class="fas fa-robot"></i></div>
-              <div class="doctor-details">
-                <h3>AI Medical Assistant</h3>
-                <span class="status">Online</span>
-              </div>
-            </div>
-            <button class="restart-btn" onclick="restartDiagnosis()">
-              <i class="fas fa-redo"></i> New Diagnosis
-            </button>
-          </div>
-          <div class="chat-messages" id="chat-messages"></div>
-          <div class="chat-input-container">
-            <div class="chat-input">
-              <input type="text" id="user-message" placeholder="Type your message or ask questions..." onkeypress="handleEnterKey(event)">
-              <label for="photo-upload" class="photo-upload-btn" title="Upload photo for AI analysis">
-                <i class="fas fa-camera"></i>
-              </label>
-              <input type="file" id="photo-upload" accept="image/*" style="display: none;" onchange="handlePhotoUpload(event)">
-              <button onclick="sendMessage()" id="send-btn"><i class="fas fa-paper-plane"></i></button>
-            </div>
-            <div class="photo-preview" id="photo-preview" style="display: none;">
-              <img id="preview-image" alt="Preview">
-              <button onclick="removePhoto()" class="remove-photo-btn"><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-        </div>
+    <!-- Symptom Selection -->
+    <section id="symptom-selection">
+      <h2 id="symptom-title"></h2>
+      <div id="symptom-cards"></div>
+      <div class="card back-btn" onclick="backToBodyParts()">
+        <i class="fa-solid fa-arrow-left"></i> Back
       </div>
     </section>
   </main>
 
-  <!-- API Status Box -->
-  <div class="api-status-box" id="api-status-box">
-    <div class="api-status-header">
-      <i class="fas fa-key"></i>
-      <span>Groq API Connection</span>
-      <button class="api-status-toggle" onclick="toggleApiStatusBox()">
-        <i class="fas fa-chevron-up" id="api-status-toggle-icon"></i>
-      </button>
-    </div>
-    <div class="api-status-content" id="api-status-content">
-      <div class="api-status-indicator">
-        <div class="status-dot" id="api-status-dot"></div>
-        <span id="api-status-text">Checking connection...</span>
-      </div>
-      <div class="api-key-actions">
-        <button onclick="testGroqProxy()" class="test-api-btn">
-          <i class="fas fa-check"></i> Test Connection
-        </button>
-        <button onclick="debugGroqProxy()" class="debug-api-btn">
-          <i class="fas fa-bug"></i> Debug
-        </button>
-      </div>
-    </div>
+  <!-- Info Modal -->
+  <div id="infoBox" class="info-box">
+    <span class="close-btn" onclick="closeInfoBox()">×</span>
+    <h3>Treatment Plan</h3>
+    <p id="infoContent"></p>
   </div>
+  <div id="overlay" class="overlay" onclick="closeInfoBox()"></div>
 
-  <!-- Connection + control scripts -->
+  <!-- JAVASCRIPT -->
   <script>
-    let groqConnected = false;
-    let selectedBodyArea = null;
-  
-    async function testGroqProxy() {
+    /* ==========================
+       CONNECTION CHECK
+    ========================== */
+    async function checkGroqConnection() {
       try {
-        const res = await fetch("/.netlify/functions/groq-proxy", {
+        const response = await fetch("https://api.groq.com/v1/models", {
+          method: "GET",
+          headers: { "Content-Type": "application/json" }
+        });
+
+        if (!response.ok) throw new Error("Groq API unavailable");
+
+        // Connection works → show main app
+        document.getElementById("connection-status").style.display = "none";
+        document.getElementById("main-container").style.display = "block";
+      } catch (err) {
+        document.getElementById("connection-status").innerHTML =
+          `<p style="color:red;">❌ Failed to connect to Groq API. Please try again later.</p>`;
+      }
+    }
+
+    window.onload = checkGroqConnection;
+
+    /* ==========================
+       SYMPTOM DATA
+    ========================== */
+    const symptomOptions = {
+      Head: ["Headache", "Dizziness", "Vision Problems"],
+      Chest: ["Chest Pain", "Cough", "Shortness of Breath"],
+      Abdomen: ["Stomach Pain", "Nausea", "Diarrhea"],
+      Leg: ["Pain", "Swelling", "Numbness"]
+    };
+
+    /* ==========================
+       NAVIGATION
+    ========================== */
+    function goToSymptoms(bodyPart) {
+      document.getElementById("body-part-selection").classList.remove("active");
+      document.getElementById("symptom-selection").classList.add("active");
+      document.getElementById("symptom-title").innerText =
+        `Select a symptom for ${bodyPart}`;
+
+      const symptomCards = document.getElementById("symptom-cards");
+      symptomCards.innerHTML = "";
+      symptomOptions[bodyPart].forEach(sym => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerHTML = `<i class="fa-solid fa-notes-medical"></i> ${sym}`;
+        div.onclick = () => requestTreatment(bodyPart, sym);
+        symptomCards.appendChild(div);
+      });
+    }
+
+    function backToBodyParts() {
+      document.getElementById("symptom-selection").classList.remove("active");
+      document.getElementById("body-part-selection").classList.add("active");
+    }
+
+    /* ==========================
+       INFO MODAL
+    ========================== */
+    function openInfoBox(content) {
+      document.getElementById("infoContent").innerText = content;
+      document.getElementById("infoBox").classList.add("active");
+      document.getElementById("overlay").classList.add("active");
+    }
+
+    function closeInfoBox() {
+      document.getElementById("infoBox").classList.remove("active");
+      document.getElementById("overlay").classList.remove("active");
+    }
+
+    /* ==========================
+       TREATMENT REQUEST
+    ========================== */
+    async function requestTreatment(bodyPart, symptom) {
+      try {
+        const response = await fetch("/.netlify/functions/groq-proxy", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            model: "llama-3.1-8b-instant",
-            messages: [{ role: "user", content: "Hello!" }],
-          }),
+            prompt: `Suggest a treatment plan for ${symptom} in the ${bodyPart}.`
+          })
         });
 
-        if (!res.ok) throw new Error("Proxy call failed");
-        const data = await res.json();
+        if (!response.ok) throw new Error("Groq request failed");
 
-        groqConnected = true;
-        document.getElementById("api-status-dot").style.background = "green";
-        document.getElementById("api-status-text").textContent = "Connected";
-        console.log("Groq proxy response:", data);
+        const data = await response.json();
+        openInfoBox(data.reply || "No response from Groq.");
       } catch (err) {
-        groqConnected = false;
-        document.getElementById("api-status-dot").style.background = "red";
-        document.getElementById("api-status-text").textContent = "Connection failed";
-        console.error("Groq proxy error:", err);
+        openInfoBox("❌ Error fetching treatment plan.");
       }
     }
-
-    function debugGroqProxy() {
-      alert("Check the console logs for full proxy request/response details.");
-    }
-
-    function startDiagnosis() {
-      if (!groqConnected) {
-        alert("Cannot start diagnosis — Groq API not connected.");
-        return;
-      }
-      document.getElementById("welcome").style.display = "none";
-      document.getElementById("body-selection").style.display = "block";
-    }
-
-    // --- BODY SELECTION HANDLING ---
-    function setupBodySelection() {
-      const bodyParts = document.querySelectorAll(".body-part");
-      bodyParts.forEach(part => {
-        part.addEventListener("click", () => {
-          // remove highlight from others
-          bodyParts.forEach(p => p.classList.remove("selected"));
-          // mark clicked one
-          part.classList.add("selected");
-          selectedBodyArea = part.getAttribute("id") || part.dataset.name || "Unknown";
-
-          console.log("Selected body area:", selectedBodyArea);
-
-          // enable continue button
-          document.getElementById("continue-to-symptoms").disabled = false;
-        });
-      });
-
-      // Continue button click
-      document.getElementById("continue-to-symptoms").addEventListener("click", () => {
-        if (!selectedBodyArea) {
-          alert("Please select a body area before continuing.");
-          return;
-        }
-        document.getElementById("body-selection").style.display = "none";
-        document.getElementById("symptom-selection").style.display = "block";
-      });
-    }
-
-    // --- INIT ---
-    document.addEventListener("DOMContentLoaded", () => {
-      setupBodySelection();
-      testGroqProxy();
-    });
   </script>
-
-  <script src="script.js?v=1.1"></script>
 </body>
 </html>
 
