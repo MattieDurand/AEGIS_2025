@@ -94,6 +94,7 @@
             <h3>Common Symptoms (click to select)</h3>
             <div class="symptom-tags" id="symptom-tags"></div>
           </div>
+
           <div class="custom-symptoms">
             <!-- Patient Information -->
             <div class="section-card" style="margin-bottom: 30px;">
@@ -119,8 +120,9 @@
               </div>
             </div>
           </div>
+
+          <!-- Weight & Height -->
           <div class="custom-symptoms">
-            <!-- Weight & Height -->
             <div class="section-card" style="margin-bottom: 30px;">
               <h3>Weight & Height</h3>
               <div class="grid-3">
@@ -144,15 +146,17 @@
               </div>
             </div>
           </div>
+
+          <!-- Ethnicity -->
           <div class="custom-symptoms">
-            <!-- Ethnicity -->
             <div class="section-card" style="margin-bottom: 30px;">
               <h3>Ethnicity</h3>
               <input type="text" id="ethnicity" value="South Asian">
             </div>
           </div>
+
+          <!-- Primary Disease -->
           <div class="custom-symptoms">
-            <!-- Primary Disease -->
             <div class="section-card" style="margin-bottom: 30px;">
               <h3>Primary Disease</h3>
               <div class="grid-3">
@@ -175,8 +179,9 @@
               </div>
             </div>
           </div>
+
+          <!-- Comorbidities -->
           <div class="custom-symptoms">
-            <!-- Comorbidities -->
             <div class="section-card" style="margin-bottom: 30px;">
               <h3>Comorbidities</h3>
               <div id="comorbidities-list">
@@ -203,6 +208,8 @@
             </div>
             <button type="button" onclick="addComorbidity()" style="margin-top: 10px;"> + Add Another Comorbidity </button>
           </div>
+
+          <!-- JS for comorbidities -->
           <script>
             let comorbidityIndex = 1;
             function addComorbidity() {
@@ -234,40 +241,39 @@
             }
             function removeComorbidity(button) {
               const item = button.closest(".comorbidity-item");
-              if (item) {
-                item.remove();
-              }
+              if (item) item.remove();
             }
           </script>
-        </div>
-        <div class="symptom-photo-section">
-          <h4>Upload Photos (Optional)</h4>
-          <p class="photo-help-text">Add photos to help describe your symptoms, rashes, injuries, or other visible conditions.</p>
-          <div class="photo-upload-area">
-            <label for="symptom-photo-upload" class="photo-upload-label">
-              <i class="fas fa-camera"></i>
-              <span>Click to upload photo</span>
-            </label>
-            <input type="file" id="symptom-photo-upload" accept="image/*" multiple style="display: none;" onchange="handleSymptomPhotoUpload(event)">
-            <p class="photo-note"><i class="fas fa-info-circle"></i> Note: Testing Llama 4 Scout model for image analysis capabilities</p>
-          </div>
-          <div class="symptom-photos-grid" id="symptom-photos-grid"></div>
-        </div>
-      </div>
-      <div class="severity-scale">
-        <h3>Pain/Discomfort Level</h3>
-        <div class="scale-container">
-          <input type="range" id="severity-scale" min="1" max="10" value="5">
-          <div class="scale-labels">
-            <span>Mild (1)</span>
-            <span id="severity-value">5</span>
-            <span>Severe (10)</span>
+
+          <!-- Photo Upload -->
+          <div class="symptom-photo-section">
+            <h4>Upload Photos (Optional)</h4>
+            <p class="photo-help-text">Add photos to help describe your symptoms, rashes, injuries, or other visible conditions.</p>
+            <div class="photo-upload-area">
+              <label for="symptom-photo-upload" class="photo-upload-label">
+                <i class="fas fa-camera"></i> <span>Click to upload photo</span>
+              </label>
+              <input type="file" id="symptom-photo-upload" accept="image/*" multiple style="display: none;" onchange="handleSymptomPhotoUpload(event)">
+              <p class="photo-note"><i class="fas fa-info-circle"></i> Note: Testing Llama 4 Scout model for image analysis capabilities</p>
+            </div>
+            <div class="symptom-photos-grid" id="symptom-photos-grid"></div>
           </div>
         </div>
+
+        <!-- Pain Severity -->
+        <div class="severity-scale">
+          <h3>Pain/Discomfort Level</h3>
+          <div class="scale-container">
+            <input type="range" id="severity-scale" min="1" max="10" value="5">
+            <div class="scale-labels">
+              <span>Mild (1)</span>
+              <span id="severity-value">5</span>
+              <span>Severe (10)</span>
+            </div>
+          </div>
+        </div>
+        <button class="continue-btn" onclick="startAIConsultation()"> Start AI Consultation <i class="fas fa-robot"></i> </button>
       </div>
-      <button class="continue-btn" onclick="startAIConsultation()">
-        Start AI Consultation <i class="fas fa-robot"></i>
-      </button>
     </section>
 
     <!-- AI Chat Section -->
@@ -276,9 +282,7 @@
         <div class="chat-container">
           <div class="chat-header">
             <div class="doctor-info">
-              <div class="doctor-avatar">
-                <i class="fas fa-robot"></i>
-              </div>
+              <div class="doctor-avatar"><i class="fas fa-robot"></i></div>
               <div class="doctor-details">
                 <h3>AI Medical Assistant</h3>
                 <span class="status">Online</span>
@@ -296,15 +300,11 @@
                 <i class="fas fa-camera"></i>
               </label>
               <input type="file" id="photo-upload" accept="image/*" style="display: none;" onchange="handlePhotoUpload(event)">
-              <button onclick="sendMessage()" id="send-btn">
-                <i class="fas fa-paper-plane"></i>
-              </button>
+              <button onclick="sendMessage()" id="send-btn"><i class="fas fa-paper-plane"></i></button>
             </div>
             <div class="photo-preview" id="photo-preview" style="display: none;">
               <img id="preview-image" alt="Preview">
-              <button onclick="removePhoto()" class="remove-photo-btn">
-                <i class="fas fa-times"></i>
-              </button>
+              <button onclick="removePhoto()" class="remove-photo-btn"><i class="fas fa-times"></i></button>
             </div>
           </div>
         </div>
@@ -337,7 +337,7 @@
     </div>
   </div>
 
-  <!-- Inline scripts for Groq connection -->
+  <!-- Connection + control scripts -->
   <script>
     let groqConnected = false;
 
@@ -384,7 +384,6 @@
     testGroqProxy();
   </script>
 
-  <!-- Your main app script -->
   <script src="script.js?v=1.1"></script>
 </body>
 </html>
