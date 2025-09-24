@@ -377,64 +377,63 @@
         </section>
     </main>
 
-    <!-- API Key Modal -->
-    <div class="modal" id="api-key-modal">
-        <div class="modal-content">
-            <h3>Groq API Key Required</h3>
-            <p>To use the AI consultation feature, please enter your Groq API key:</p>
-            <input type="password" id="api-key-input" placeholder="Enter your Groq API key">
-            <div class="modal-buttons">
-                <button onclick="saveApiKey()">Save</button>
-                <button onclick="closeModal()">Cancel</button>
-            </div>
-            <p class="api-note">
-                Don't have an API key? Get one free at 
-                <a href="https://console.groq.com/" target="_blank">console.groq.com</a>
-            </p>
+    <!-- API Status Box -->
+    <div class="api-status-box" id="api-status-box">
+      <div class="api-status-header">
+        <i class="fas fa-key"></i>
+        <span>Groq API Connection</span>
+        <button class="api-status-toggle" onclick="toggleApiStatusBox()">
+          <i class="fas fa-chevron-up" id="api-status-toggle-icon"></i>
+        </button>
+      </div>
+      <div class="api-status-content" id="api-status-content">
+        <div class="api-status-indicator">
+          <div class="status-dot" id="api-status-dot"></div>
+          <span id="api-status-text">Checking connection...</span>
         </div>
+        <div class="api-key-actions">
+          <button onclick="testGroqProxy()" class="test-api-btn">
+            <i class="fas fa-check"></i> Test Connection
+          </button>
+          <button onclick="debugGroqProxy()" class="debug-api-btn">
+            <i class="fas fa-bug"></i> Debug
+          </button>
+        </div>
+      </div>
     </div>
 
-    <!-- API Key Status Box -->
-    <div class="api-status-box" id="api-status-box">
-        <div class="api-status-header">
-            <i class="fas fa-key"></i>
-            <span>API Key Status</span>
-            <button class="api-status-toggle" onclick="toggleApiStatusBox()">
-                <i class="fas fa-chevron-up" id="api-status-toggle-icon"></i>
-            </button>
-        </div>
-        <div class="api-status-content" id="api-status-content">
-            <div class="api-status-indicator">
-                <div class="status-dot" id="api-status-dot"></div>
-                <span id="api-status-text">Not configured</span>
-            </div>
-            <div class="api-key-input-container">
-                <input 
-                    type="password" 
-                    id="api-key-input-persistent" 
-                    placeholder="Enter your Groq API key"
-                    onkeypress="handleApiKeyEnter(event)"
-                >
-                <button onclick="saveApiKeyPersistent()" class="save-api-btn">
-                    <i class="fas fa-save"></i>
-                </button>
-            </div>
-            <div class="api-key-actions">
-                <button onclick="testApiKey()" class="test-api-btn">
-                    <i class="fas fa-check"></i> Test
-                </button>
-                <button onclick="debugApiKey()" class="debug-api-btn">
-                    <i class="fas fa-bug"></i> Debug
-                </button>
-                <button onclick="clearApiKey()" class="clear-api-btn">
-                    <i class="fas fa-trash"></i> Clear
-                </button>
-                <a href="https://console.groq.com/" target="_blank" class="get-api-link">
-                    <i class="fas fa-external-link-alt"></i> Get API Key
-                </a>
-            </div>
-        </div>
-    </div>
+    <script>
+    async function testGroqProxy() {
+      try {
+        const res = await fetch("/.netlify/functions/groq-proxy", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            model: "llama-3.1-8b-instant",
+            messages: [{ role: "user", content: "Hello!" }],
+          }),
+        });
+
+        if (!res.ok) throw new Error("Proxy call failed");
+        const data = await res.json();
+
+        document.getElementById("api-status-dot").style.background = "green";
+        document.getElementById("api-status-text").textContent = "Connected";
+        console.log("Groq proxy response:", data);
+      } catch (err) {
+        document.getElementById("api-status-dot").style.background = "red";
+        document.getElementById("api-status-text").textContent = "Connection failed";
+        console.error("Groq proxy error:", err);
+      }
+    }
+
+    function debugGroqProxy() {
+      alert("Check the console logs for full proxy request/response details.");
+    }
+
+    // Run test on load
+    testGroqProxy();
+    </script>
 
     <script src="script.js?v=1.1"></script>
 </body>
