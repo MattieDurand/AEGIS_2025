@@ -92,10 +92,6 @@ function showSymptoms() {
 }
 
 function startAIConsultation() {
-    if (!apiKey) {
-        showTip('Please your API key first');
-        return;
-    }
     try {
         let comorbiditiesData = [];
         // Get all elements with the class 'comorbidity-item'
