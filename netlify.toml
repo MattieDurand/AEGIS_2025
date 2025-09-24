@@ -4,7 +4,7 @@
   publish = "dist"   # relative to base, so no need to repeat full path
 
 [functions]
-  directory = "netlify/functions"
+  directory = "functions"
 
 [template.environment]
   GROQ_API_KEY = "Set this in Netlify dashboard (Site Settings → Environment variables)"
